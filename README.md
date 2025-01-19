@@ -3,6 +3,10 @@
 
 Bienvenido/a a este proyecto super chebre! Aquí encontrarás una configuración lista para desarrollar aplicaciones usando:
 
+AmplyFy del proyecto.
+
+https://main.d2lc6lnjonop6v.amplifyapp.com/
+
 ![App Screenshot](src/assets/img/presentacion.png) 
 
 React (UI Library)

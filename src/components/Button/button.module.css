@@ -1,0 +1,325 @@
+.wrapper__button.blue button {
+    background: #3069FE;
+    color: #fff;
+    transition: 0.5s;
+    border: 1px solid #3069FE;
+}
+
+.wrapper__buttonOutline.blue button {
+    background: #fff;
+    color: #3069FE;
+    border: 1px solid #3069FE;
+    transition: 0.5s;
+}
+
+.wrapper__buttonOutline.blue button.button__icon svg path {
+    fill: #3069FE !important;
+    transition: 0.5s;
+}
+
+.wrapper__button.primary button, 
+.wrapper__buttonOutline.primary button {
+    background: #DEEDF8;
+    color: #039AF1;
+    border: 1px solid #039AF1;
+    transition: 0.5s;
+}
+
+.wrapper__button.primary button:hover, 
+.wrapper__buttonOutline.primary button:hover {
+    background: #039AF1;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.primary button.button__icon svg path, 
+.wrapper__buttonOutline.primary button.button__icon svg path {
+    fill: #039AF1;
+    transition: 0.5s;
+}
+
+.wrapper__button.primary button.button__icon:hover svg path,
+.wrapper__buttonOutline.primary button.button__icon:hover svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+
+/*------- WHITE--------*/
+.wrapper__button.white button, 
+.wrapper__buttonOutline.white button {
+    background: #FFFFFF;
+    color: #131416;
+    border: 1px solid #131416;
+    transition: 0.5s;
+}
+
+.wrapper__button.white button:hover, 
+.wrapper__buttonOutline.white button:hover {
+    background: #131416;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.white button.button__icon svg path, 
+.wrapper__buttonOutline.white button.button__icon svg path {
+    fill: #131416;
+    transition: 0.5s;
+}
+
+.wrapper__button.white button.button__icon:hover svg path,
+.wrapper__buttonOutline.white button.button__icon:hover svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+/*END WHITE*/
+
+/*------- BLACK --------*/
+.wrapper__button.black button, 
+.wrapper__buttonOutline.black button {
+    background: #131416;
+    color: #FFFFFF;
+    border: 1px solid #131416;
+    transition: 0.5s;
+}
+
+.wrapper__button.black button:hover, 
+.wrapper__buttonOutline.black button:hover {
+    background: #131416;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.black button.button__icon svg path, 
+.wrapper__buttonOutline.black button.button__icon svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.black button.button__icon:hover svg path,
+.wrapper__buttonOutline.black button.button__icon:hover svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+/*END BLACK */
+
+.wrapper__button.blue button.button__icon svg path,
+.wrapper__buttonOutline.blue button.button__icon svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.success button,
+.wrapper__buttonOutline.success button {
+    background: #E8FFF3;
+    color: #265B4D;
+    border: 1px solid #265B4D;
+    transition: 0.5s;
+}
+
+.wrapper__button.success button:hover, 
+.wrapper__buttonOutline.success button:hover {
+    background: #265B4D;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+
+.wrapper__button.success button.button__icon svg path,
+.wrapper__buttonOutline.success button.button__icon svg path {
+    fill: #265B4D;
+    transition: 0.5s;
+}
+
+
+/* successTicket */
+
+.wrapper__button.successTicket button,
+.wrapper__buttonOutline.successTicket button {
+    background: #F7FEF4;
+    color: #05C46B;
+    border: 1px solid #05C46B;
+    transition: 0.5s;
+}
+
+.wrapper__button.successTicket button:hover, 
+.wrapper__buttonOutline.successTicket button:hover {
+    background: #05C46B;
+    color: #fff;
+    transition: 0.5s;
+   
+}
+
+
+.wrapper__button.successTicket button.button__icon svg path,
+.wrapper__buttonOutline.successTicket button.button__icon svg path {
+    fill: #05C46B;
+    transition: 0.5s;
+   
+}
+
+.wrapper__button.successTicket button:hover svg path, 
+.wrapper__buttonOutline.successTicket button:hover svg path {
+  
+    fill: #fff;
+    transition: 0.5s;
+   
+}
+
+
+
+
+.wrapper__button.success button.button__icon:hover svg path ,
+.wrapper__buttonOutline.success button.button__icon:hover svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.danger button, 
+.wrapper__buttonOutline.danger button {
+    background: #FFF5F8;
+    color: #F14183;
+    border: 1px solid #F14183;
+    transition: 0.5s;
+}
+
+.wrapper__button.danger button:hover,
+.wrapper__buttonOutline.danger button:hover {
+    background: #F14183;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.danger button.button__icon svg path,
+.wrapper__buttonOutline.danger button.button__icon svg path {
+    fill: #F14183;
+    transition: 0.5s;
+}
+
+.wrapper__button.danger button.button__icon:hover svg path,
+.wrapper__buttonOutline.danger button.button__icon:hover svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.warning button,
+.wrapper__buttonOutline.warning button {
+    background: #FFF8DD;
+    color: #ffc700;
+    border: 1px solid #ffc700;
+    transition: 0.5s;
+}
+
+.wrapper__button.warning button:hover,
+.wrapper__buttonOutline.warning button:hover  {
+    background: #ffc700;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.warning button.button__icon svg path,
+.wrapper__buttonOutline.warning button.button__icon svg path {
+    fill: #ffc700;
+    transition: 0.5s;
+}
+
+.wrapper__button.warning button.button__icon:hover svg path,
+.wrapper__buttonOutline.warning button.button__icon:hover svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 8px;
+    width: max-content;
+    border: none;
+    font-weight: 600;
+    font-family: Inter;
+    border: 1px solid rgb(230, 229, 229);
+    cursor: pointer;
+}
+
+button.button__icon {
+    display: flex;
+    align-items: center;
+    padding: 6px 15px;
+}
+
+button.button__icon > div {
+    position: relative;
+    right: 6px;
+}
+
+.wrapper__button.success button {
+    background: #265B4D;
+    color: #fff;
+    transition: 0.5s;
+    border: 1px solid #265B4D;
+}
+
+.wrapper__buttonOutline.success button {
+    background: #fff;
+    color: #265B4D;
+    border: 1px solid #265B4D;
+    transition: 0.5s;
+}
+
+.wrapper__buttonOutline.success button.button__icon svg path {
+    fill: #265B4D !important;
+    transition: 0.5s;
+}
+
+.wrapper__button.success button.button__icon svg path ,
+.wrapper__buttonOutline.success button.button__icon svg path {
+    fill: #fff;
+    transition: 0.5s;
+}
+
+.wrapper__button.success button:hover svg path, 
+.wrapper__buttonOutline.success button:hover svg path {
+    fill: #fff !important;
+    transition: 0.5s;
+}
+
+/* Outline */
+.wrapper__buttonOutline.primary button {
+    background: #fff;
+}
+
+.wrapper__buttonOutline.success button {
+    background: #fff;
+}
+
+.wrapper__buttonOutline.danger button {
+    background: #fff;
+}
+
+.wrapper__buttonOutline.warning button {
+    background: #fff;
+}
+
+.button__loader__icon{
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation .6s linear infinite;
+}
+
+.wrapper__button.blue.loading-custom{
+    pointer-events: none !important;
+}
+
+@keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+

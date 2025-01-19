@@ -40,4 +40,4 @@ Para iniciar sigue los pasos luego de haber levanto el proyecto de backend
 
 ## Screenshots
 
-![App Screenshot](src/assets/ima/bannerlilab.png).
+![App Screenshot](src/assets/img/bannerlilab.png) 

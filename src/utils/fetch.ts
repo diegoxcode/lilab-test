@@ -1,3 +1,5 @@
+import useAlertStore from "../zustand/alert";
+
 const BASE_URL = 'http://localhost:5283/api';
 let isRefreshing = false; // Controla si el refresh está en proceso
 let pendingRequests: (() => void)[] = []; // Almacena solicitudes pendientes durante el refresh
@@ -27,8 +29,7 @@ async function fetchData<T>(url: string, options?: any): Promise<T> {
         const response = await fetch(url, options);
         console.log(response);
         if (response.status === 401) {
-            console.warn('Token expirado, intentando refrescar...');
-
+            useAlertStore.getState().alert("Credenciales invalidas, intentelo de nuevo", "error");
             const refreshToken : string | null = localStorage.getItem('refreshToken');
             const token : string | null = localStorage.getItem('token');
 
@@ -66,6 +67,7 @@ async function fetchData<T>(url: string, options?: any): Promise<T> {
                 isRefreshing = false;
                 redirectToLogin();
             }
+            return await response.json();
         }
 
         return await response.json();

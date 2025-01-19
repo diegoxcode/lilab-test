@@ -17,24 +17,26 @@ export interface IAuthState {
     addUser: (data: IUser) => void
     deleteUser: (data: IUser) => void
     user: IUser | null
+    verifiedEmail: (token: string, email: string) => void
 }
 
 export const useAuthStore = create<IAuthState>()(devtools((set, _get) => ({
-    
+
     success: false,
     auth: null,
-    login:  async (data: any) => {
+    login: async (data: any) => {
         try {
             const resp: IResponse = await post(`user/signin`, data);
             console.log(resp);
-            if (resp.code === 2) {
-                return useAlertStore.getState().alert("La contraseña o el usuario son incorrectos, intentelo de nuevo porfavor", "error");
+            if (resp.code === 0) {
+                return useAlertStore.getState().alert(resp.message, "error");
             }
             if (resp.code === 1) {
                 localStorage.setItem("token", resp.data.token);
                 localStorage.setItem("refreshToken", resp.data.refreshToken);
-                set({ 
-                    auth: resp.data, success: true }, false, "LOGIN");
+                set({
+                    auth: resp.data, success: true
+                }, false, "LOGIN");
             } else {
                 set({ auth: null });
             }
@@ -55,7 +57,7 @@ export const useAuthStore = create<IAuthState>()(devtools((set, _get) => ({
             // console.error('Error during login:', error);
         }
     },
-    getUsersById:  async (data: IUser) => {
+    getUsersById: async (data: IUser) => {
         try {
             const resp: IResponse = await get(`user/${data.id}`);
             if (resp.code === 1) {
@@ -68,7 +70,7 @@ export const useAuthStore = create<IAuthState>()(devtools((set, _get) => ({
             // console.error('Error during login:', error);
         }
     },
-    editUser:  async (data: IUser) => {
+    editUser: async (data: IUser) => {
         console.log(data);
         try {
             const resp: IResponse = await put(`user/update/${data.id}`, data);
@@ -91,12 +93,12 @@ export const useAuthStore = create<IAuthState>()(devtools((set, _get) => ({
             console.error('Error during login:', error);
         }
     },
-    addUser:  async (data: IUser) => {
+    addUser: async (data: IUser) => {
         console.log(data);
         try {
             const resp: IResponse = await post(`user/register`, data);
             if (resp.code === 1) {
-                useAlertStore.getState().alert("El usuario se agrego correctamente", "success");
+                useAlertStore.getState().alert("Usuario creado correctamente, por favor verifique su correo para que pueda acceder a la plataforma con su rol correspondiente", "success");
                 set((state) => ({
                     users: [...state.users, resp.data]
                 }), false, "ADD_USER");
@@ -107,7 +109,7 @@ export const useAuthStore = create<IAuthState>()(devtools((set, _get) => ({
             console.error('Error during login:', error);
         }
     },
-    deleteUser:  async (data: IUser) => {
+    deleteUser: async (data: IUser) => {
         console.log(data);
         try {
             const resp: IResponse = await del(`user/${data.id}`);
@@ -132,6 +134,23 @@ export const useAuthStore = create<IAuthState>()(devtools((set, _get) => ({
             const resp: IResponse = await get(`user/@me`);
             if (resp.code === 1) {
                 console.log(resp);
+                set({ auth: resp.data });
+            } else {
+                set({ auth: null });
+            }
+        } catch (error) {
+            // console.error('Error during login:', error);
+        }
+    },
+    verifiedEmail: async (token: string, email: string) => {
+        try {
+            const resp: IResponse = await get(`user/verify-email?token=${token}&email=${email}`);
+            if (resp.code === 1) {
+                console.log(resp);
+                useAlertStore.getState().alert("Su correo ha sido verificado correctamente", "success");
+                setTimeout(() => {
+                    window.location.href ="/"
+                }, 1000);
                 set({ auth: resp.data });
             } else {
                 set({ auth: null });

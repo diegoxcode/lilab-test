@@ -14,3 +14,5 @@ Node.js >= 18
 
 Luego de esto *IMPORANTE SI LO DESEAS PROBAR EN NETLIFY Y NO LOCALMENTE
 . Desabilitar el cors de google para poder ver todo lo que tiene el proyecto.
+
+![Texto alternativo]('img/bannerlilab.png')

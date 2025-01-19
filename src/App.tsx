@@ -8,6 +8,7 @@ import Access from './pages/Dashboard/Access';
 import Roles from './pages/Dashboard/Roles';
 import { useEffect } from 'react';
 import { IAuthState, useAuthStore } from './zustand/auth';
+import ConfirmEmail from './pages/ConfirmEmail';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
+        <Route path="/confirm-email" element={<ConfirmEmail />} />
         <Route
           path="/dashboard"
           element={

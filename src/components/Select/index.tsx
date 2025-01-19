@@ -35,7 +35,6 @@ interface IOption {
 }
 
 const Select = ({
-    motivoForm,
     options,
     onChange,
     handleGetData,
@@ -52,14 +51,14 @@ const Select = ({
 }: IProps) => {
 
 
-    const [valueOptions, setValueOptions] = useState<string>(defaultValue);
+    const [_valueOptions, setValueOptions] = useState<string>(defaultValue);
     const [optionSearch, setOptionsSearch] = useState<any>([]);
     const [isOpen, setIsOpen, ref] = useOutsideClick(false);
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [search, setSearch] = useState("");
-    const [searching,] = useState(isSearch);
+    const [search, _setSearch] = useState("");
+    const [_searching,] = useState(isSearch);
 
-    const [querySearch, setQuerySeach] = useState<string>("");
+    const [querySearch, _setQuerySeach] = useState<string>("");
     const debounceSearch = useDebounce(querySearch, 350);
     const [selectedOptionIndex, setSelectedOptionIndex] = useState<number>(-1);
 
@@ -82,19 +81,6 @@ const Select = ({
         }
         setIsOpen(false);
     };
-
-    // const searchOptions = (e: any) => {
-    //     setValueOptions("");
-    //     setShowOptions(true)
-    //     const value = e.target.value
-    //     if (handleGetData) {
-    //         if (value.length >= 3) {
-    //             setQuerySeach(value);
-    //             return;
-    //         }
-    //     }
-    //     setSearch(value);
-    // }
 
     useEffect(() => {
         if (debounceSearch.length <= 2) {

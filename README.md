@@ -1,13 +1,13 @@
-# React + TypeScript + Vite + Zustand
+# Proyecto React + TypeScript + Vite + Zustand
+¡Bienvenido/a a este proyecto super chebre! Aquí encontrarás una configuración lista para desarrollar aplicaciones usando:
 
-Primero deberan instalar las dependencias
+React (UI Library)
+TypeScript (Tipado estático)
+Vite (Empaquetador rápido)
+Zustand (Manejo de estado sencillo y escalable)
 
-npm install
+Requisitos Previos
+Node.js >= 18
+(Asegúrate de tenerlo instalado en tu máquina)
 
-Asegurese de que tenga node +18
-
-Para correr el proyecto
-
-npm run dev
-
-Luego de esto se tendra que levantar el proyecto localmente del backend .net Core para poder explorar el proyecto
+.NET Core (para el backend local)

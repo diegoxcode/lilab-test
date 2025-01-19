@@ -43,10 +43,39 @@ Para iniciar sigue los pasos luego de haber levanto el proyecto de backend
 ## Pasos para el proyecto
 
 1. Consumir el api de administrador para poder iniciar con el proyecto desde el backend /api/user/register-admin
+
 ![App Screenshot](src/assets/img/paso1.png) 
 
-1. Consumir el api para verificar el correo desde el backend /api/user/verify-email
+2. Consumir el api para verificar el correo desde el backend /api/user/verify-email
+
 ![App Screenshot](src/assets/img/paso2.png) 
 
-1. Luego dirigete a la pagina de Club Lilab app
+3. Luego dirigete a la pagina de Club Lilab app
+
 ![App Screenshot](src/assets/img/paso3.png) 
+
+4. Luego inicia sesión con el usuario administrador con el que te registraste
+
+![App Screenshot](src/assets/img/paso4.png) 
+
+## Modulos del Proyecto
+
+Modulo de dashboard, aqui podrás ver el total de clientes , los accesos y los miembros activos.
+
+![App Screenshot](src/assets/img/presentacion.png) 
+
+Modulo de clientes, aqui podrás filtrar, eliminar, editar y aceptar las entradas de los visitantes y miembros activos.
+
+![App Screenshot](src/assets/img/paso5.png) 
+
+Modulo de accesos, aqui podrás filtrar las entradas de los visitantes y miembros activos.
+
+![App Screenshot](src/assets/img/paso6.png) 
+
+Modulo de roles, aqui podrás administrar quien puede tener acceso al rol de staff o admin, aunque el sistema solo permite un administrador
+
+![App Screenshot](src/assets/img/paso7.png) 
+
+## Resposivo
+
+![App Screenshot](src/assets/img/paso8.png) 
